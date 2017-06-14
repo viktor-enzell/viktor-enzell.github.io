@@ -124,9 +124,10 @@ nav ul li:hover{
 	line-height: 5px;
 }
 
-#footer #facebook {
-	padding: 10px;
+#footer img{
+	padding: 15px;
 	float: left;
+	width: 35px;
 }
 
 #footer i{
