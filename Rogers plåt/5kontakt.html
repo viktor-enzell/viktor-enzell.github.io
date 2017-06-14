@@ -1,0 +1,75 @@
+<HTML>
+  <HEAD>
+    <title>rogersplat.se</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="5kontakt.css">
+	  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  </HEAD>
+
+  <BODY>
+
+    <div id="logobar">
+      <center><img id="logo" src="logo.png"></center>
+    </div>
+
+
+    <nav>
+  		<div class="menu-icon">Meny</div>
+  		<ul>
+  			<li><a href="1startsida.html">Startsida</a></li>
+  			<li><a href="2företaget.html">Företaget</a></li>
+  			<li><a href="3referenser.html">Referenser</a></li>
+  			<li><a href="4leverantörer.html">Leverantörer</a></li>
+  			<li><a href="5kontakt.html">Kontakt</a></li>
+  		</ul>
+  	</nav>
+
+
+    <div id="content">
+      <div>
+        <img src="kontaktbild.jpg">
+        <p>Roger Dalborg<br>Telefon: 0703153900<br>Mail: rogersplat@live.se</p>
+      </div>
+      <div>
+        <img src="kontaktbild.jpg">
+        <p>Matti Oljelund</p>
+      </div>
+      <div>
+        <img src="kontaktbild.jpg">
+        <p>David Persson</p>
+      </div>
+      <div>
+        <img src="kontaktbild.jpg">
+        <p>Robin Lindgren</p>
+      </div>
+      <div>
+        <img src="kontaktbild.jpg">
+        <p>Teodor Fohrman</p>
+      </div>
+    </div>
+
+
+    <div id="footer">
+      <div id="facebook">
+        <a href="https://www.facebook.com/Rogers-Pl%C3%A5tslageri-312617372122624/?fref=ts"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div id="contact">
+        <p>Tel: 063 513900</p>
+        <p>Mail: rogersplat@live.se</p></br>
+        <p>Odensalagatan 28 Östersund</p>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    	$(".menu-icon").on("click", function(){
+    		$("nav ul").toggleClass("showing");
+    	});
+    });
+    </script>
+  </BODY>
+</HTML>

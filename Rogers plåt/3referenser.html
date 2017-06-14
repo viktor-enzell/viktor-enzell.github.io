@@ -1,0 +1,140 @@
+<HTML>
+  <HEAD>
+    <title>rogersplat.se</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="3referenser.css">
+	  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  </HEAD>
+
+  <BODY>
+
+    <div id="logobar">
+      <center><img id="logo" src="logo.png"></center>
+    </div>
+
+
+    <nav>
+  		<div class="menu-icon">Meny</div>
+  		<ul>
+  			<li><a href="1startsida.html">Startsida</a></li>
+  			<li><a href="2företaget.html">Företaget</a></li>
+  			<li><a href="3referenser.html">Referenser</a></li>
+  			<li><a href="4leverantörer.html">Leverantörer</a></li>
+  			<li><a href="5kontakt.html">Kontakt</a></li>
+  		</ul>
+  	</nav>
+
+
+    <div id="content">
+      <div id="img1"><a class="button" href="#jobb1">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\cpalats.jpg">
+        <p>Centralpalatset</p></a>
+      </div>
+      <div id="img2"><a class="button" href="#jobb2">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\campus5-crop.jpg">
+        <p>Campus</p></a>
+      </div>
+      <div id="img3"><a class="button" href="#jobb3">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\privat.jpg">
+        <p>Jobb 3</p></a>
+      </div>
+      <div id="img4"><a class="button" href="#jobb4">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\brogården-crop.jpg">
+        <p>Brogården</p></a>
+      </div>
+      <div id="img5"><a class="button" href="#jobb5">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\kopparstuprör-crop.jpg">
+        <p>Kopparstuprör</p></a>
+      </div>
+      <div id="img6"><a class="button" href="#jobb6">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\detaljer.jpg">
+        <p>Jobb 2</p></a>
+      </div>
+      <div id="img7"><a class="button" href="#jobb7">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\panorama-crop.jpg">
+        <p>Jobb 7</p></a>
+      </div>
+    </div>
+
+
+    <div id="content2">
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="arrow" src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\arrow.png"></img></button>
+
+      <div id="jobb1">
+        <p class="caption">Centralpalatset</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\cpalats.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\cpalats2.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\cpalats3.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\cpalats4.jpg">
+      </div>
+      <div id="jobb2">
+        <p class="caption">Campus</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\campus5.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\campus4.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\campus2.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\campus.jpg">
+      </div>
+      <div id="jobb3">
+        <p class="caption">Jobb 3</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\privat.jpg">
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\privat1.jpg">
+      </div>
+      <div id="jobb4">
+        <p class="caption">Brogården</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\brogården.jpg">
+      </div>
+      <div id="jobb5">
+        <p class="caption">Jobb 5</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\kopparstuprör.jpg">
+      </div>
+      <div id="jobb6">
+        <p class="caption">Jobb 2</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\detaljer.jpg">
+      </div>
+      <div id="jobb7">
+        <p class="caption">Jobb 7</p>
+        <img src="C:\Users\Viktor\Documents\Html\Rågers plåt\referenser\panorama.jpg">
+      </div>
+    </div>
+
+
+    <div id="footer">
+      <div id="facebook">
+        <a href="https://www.facebook.com/Rogers-Pl%C3%A5tslageri-312617372122624/?fref=ts"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div id="contact">
+        <p>Tel: 063 513900</p>
+        <p>Mail: rogersplat@live.se</p></br>
+        <p>Odensalagatan 28 Östersund</p>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    	$(".menu-icon").on("click", function(){
+    		$("nav ul").toggleClass("showing");
+    	});
+    });
+
+
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Chrome, Safari and Opera
+        document.documentElement.scrollTop = 0; // For IE and Firefox
+    }
+
+    </script>
+  </BODY>
+</HTML>
