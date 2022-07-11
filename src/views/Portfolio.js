@@ -1,14 +1,13 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import logo from "../img/logo.png";
+import { makeStyles } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-import { headerHeight, footerHeight, slimWidth, topMargin } from "./Home";
+import { headerHeight, footerHeight, topMargin } from "./Home";
+import { Divider } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -18,13 +17,17 @@ const useStyles = makeStyles({
     minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
   },
   portfolioGrid: {
-    maxWidth: slimWidth,
-    width: "100%",
-    marginLeft: "auto",
-    marginRight: "auto",
+    marginTop: "0px",
+    marginLeft: "-24px",
   },
-  img: {
-    height: 140,
+  textParagraph: {
+    marginBottom: "24px",
+  },
+  card: {
+    borderStyle: "solid",
+    borderColor: "#e0e0e0",
+    borderWidth: "1px",
+    boxShadow: "none",
   },
 });
 
@@ -33,21 +36,31 @@ export default function Portfolio() {
 
   return (
     <div className={classes.root}>
+      <Typography variant="h1" gutterBottom>
+        Portfolio
+      </Typography>
+      <Typography className={classes.textParagraph}>
+        This is a selection of projects I have worked on.
+      </Typography>
+
+      <Divider />
+
       <Grid container spacing={3} className={classes.portfolioGrid}>
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
-                🗣
+              <Typography gutterBottom variant="body2">
+                <span role="img">🗣</span>
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Swedish Speech-to-text
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                AI, Python
+                AI, NLP, Python
               </Typography>
               <Typography>
-                Description description description description description
+                Master's Thesis at KTH. Highest ranking model for Swedish
+                Speech-to-text on the Common Voice test set.
               </Typography>
             </CardContent>
             <CardActions>
@@ -70,16 +83,16 @@ export default function Portfolio() {
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
-                ☝️
+              <Typography gutterBottom variant="body2">
+                <span role="img">☝️</span>
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Sign Language Teacher
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                Tag
+                AI, Vision, Python
               </Typography>
               <Typography>
                 Description description description description description
@@ -98,85 +111,200 @@ export default function Portfolio() {
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
-                📰
+              <Typography gutterBottom variant="body2">
+                <span role="img">📰</span>
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 News Recommender
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                Tag
+                AI, NLP, Python, Django
               </Typography>
               <Typography>
                 Description description description description description
               </Typography>
             </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/news-recommender"
+                target="_blank"
+              >
+                Github repo
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
+              <Typography gutterBottom variant="body2">
                 💬
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Tweet Analyzer
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                Tag
+                AI, NLP, Python, Django
               </Typography>
               <Typography>
                 Description description description description description
               </Typography>
             </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/tweet-analyser"
+                target="_blank"
+              >
+                Github repo
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
+              <Typography gutterBottom variant="body2">
                 🤖
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Dataless Text Classification with BERT
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                Tag
+                AI, NLP, Python
               </Typography>
               <Typography>
                 Description description description description description
               </Typography>
             </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/fine-tune-bert"
+                target="_blank"
+              >
+                Github repo
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
+              <Typography gutterBottom variant="body2">
                 📝
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Collaborative Real-time Notes App
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                Tag
+                Node, React
               </Typography>
               <Typography>
                 Description description description description description
               </Typography>
             </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/pinboard"
+                target="_blank"
+              >
+                Github repo
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card>
+          <Card className={classes.card}>
             <CardContent>
-              <Typography gutterBottom variant="h1" component="h2">
+              <Typography gutterBottom variant="body2">
+                🏡
+              </Typography>
+              <Typography gutterBottom variant="h3" component="h2">
+                Business Website Design
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                Wordpress, CSS, UI
+              </Typography>
+              <Typography>Freelance project.</Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" href="https://byhuset.se" target="_blank">
+                byhuset.se
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography gutterBottom variant="body2">
+                🏇
+              </Typography>
+              <Typography gutterBottom variant="h3" component="h2">
+                Employment at Bricco
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                Python, Django, React, DevOps
+              </Typography>
+              <Typography>
+                Worked full-time one year at Bricco on various projects... Here
+                is link to website I was part in creating from scratch.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://svenskgalopp.se"
+                target="_blank"
+              >
+                svenskgalopp.se
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography gutterBottom variant="body2">
+                🕹
+              </Typography>
+              <Typography gutterBottom variant="h3" component="h2">
+                Reinforcement Learning Racing Game
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                AI, C#, Unity
+              </Typography>
+              <Typography>
+                Description description description description description
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/Maddi97/NDVW_RacingGame"
+                target="_blank"
+              >
+                Github repo
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography gutterBottom variant="body2">
                 📍
               </Typography>
               <Typography gutterBottom variant="h3" component="h2">
@@ -189,6 +317,15 @@ export default function Portfolio() {
                 Description description description description description
               </Typography>
             </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/visit-list"
+                target="_blank"
+              >
+                Github repo
+              </Button>
+            </CardActions>
           </Card>
         </Grid>
       </Grid>

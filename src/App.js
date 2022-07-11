@@ -1,5 +1,5 @@
 import React from "react";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import grey from "@material-ui/core/colors/grey";
@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import Routes from "./views/Routes";
 import { slimWidth } from "./views/Home";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   typography: {
     fontFamily: [
       "-apple-system",
@@ -27,8 +27,8 @@ const theme = createMuiTheme({
       "Birch",
     ].join(","),
     h1: {
-      fontSize: 36,
-      textAlign: "center",
+      fontSize: 60,
+      textAlign: "left",
       fontFamily: "Helvetica",
       fontWeight: "bold",
       maxWidth: slimWidth,
@@ -37,7 +37,7 @@ const theme = createMuiTheme({
     },
     h2: {
       fontSize: 28,
-      textAlign: "center",
+      textAlign: "left",
       fontFamily: "Helvetica",
       fontWeight: "bold",
       maxWidth: slimWidth,
@@ -63,6 +63,13 @@ const theme = createMuiTheme({
       fontFamily: "Helvetica",
       textAlign: "left",
       maxWidth: slimWidth,
+      marginRight: "auto",
+      marginLeft: "auto",
+    },
+    body2: {
+      fontSize: 36,
+      textAlign: "center",
+      fontFamily: "Helvetica",
       marginRight: "auto",
       marginLeft: "auto",
     },

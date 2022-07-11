@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 import {
   ListItemText,
   ListItem,
@@ -22,7 +22,7 @@ import { slimWidth } from "../views/Home";
 const drawerWidth = 240;
 const swapNavbarWidth = 960;
 const activeButtonColor = "#eeeeee";
-const toolBarMaxWidth = slimWidth - 24;
+const toolBarMaxWidth = slimWidth - 48;
 
 const useStyles = makeStyles({
   root: {
@@ -58,6 +58,9 @@ const useStyles = makeStyles({
     color: "black",
   },
   link: { textDecoration: "none", color: "black" },
+  menuButton: {
+    marginRight: "16px",
+  },
 });
 
 export default function Navbar() {
@@ -92,6 +95,7 @@ export default function Navbar() {
             <IconButton
               color="inherit"
               aria-label="open drawer"
+              className={classes.menuButton}
               onClick={() => setOpen(true)}
             >
               <MenuIcon />
