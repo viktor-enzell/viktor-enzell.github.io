@@ -50,6 +50,9 @@ const useStyles = makeStyles({
     fontSize: "23px",
     filter: "grayscale(100%)",
   },
+  textContainerSM: {
+    paddingRight: "16px",
+  },
 });
 
 export default function Home() {
@@ -59,16 +62,30 @@ export default function Home() {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid item xs={12} sm={8}>
+        <Grid
+          item
+          xs={12}
+          sm={8}
+          className={width > smBreakpointWidth && classes.textContainerSM}
+        >
           <Typography variant="h1" gutterBottom>
             Software
             <br />
             Developer
           </Typography>
           <Typography gutterBottom>
-            Software Developer based in Stockholm with a Bachelor's degree in
-            Computer Science from Uppsala University and a Master's degree in
-            Computer Science from KTH.
+            Hi, my name is Viktor Enzell.
+            <br />
+            <br />
+            I'm a full stack developer based in Stockholm, passionate about
+            building great products that utilize the power of machine learning.
+            I have a Master's degree in Computer Science from KTH, where I
+            specialized in AI, primarily focusing on natural language processing
+            and speech.
+            <br />
+            <br />
+            Check out some of my previous projects in my portfolio or on GitHub
+            and Hugging Face. Also, feel free to connect with me on LinkedIn!
           </Typography>
         </Grid>
         {width > smBreakpointWidth ? (
@@ -109,7 +126,7 @@ export default function Home() {
               <ListItemIcon className={classes.contactListIcon}>
                 <GitHubIcon />
               </ListItemIcon>
-              <ListItemText primary="Github" />
+              <ListItemText primary="GitHub" />
             </ListItem>
             <Divider />
             <ListItem
@@ -119,9 +136,11 @@ export default function Home() {
               href="https://huggingface.co/viktor-enzell"
             >
               <ListItemIcon className={classes.contactListIcon}>
-                  <span role="img" className={classes.huggingfaceIcon}>🤗</span>
+                <span role="img" aria-label="hugging face emoji" className={classes.huggingfaceIcon}>
+                  🤗
+                </span>
               </ListItemIcon>
-              <ListItemText primary="Huggingface" />
+              <ListItemText primary="Hugging Face" />
             </ListItem>
           </List>
         </Grid>
