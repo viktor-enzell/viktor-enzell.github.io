@@ -4,7 +4,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import grey from "@material-ui/core/colors/grey";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -86,7 +86,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <Container maxWidth="md">
           <Grid container>
             <Navbar />
@@ -98,7 +98,7 @@ export default function App() {
             <Footer />
           </Grid>
         </Container>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
