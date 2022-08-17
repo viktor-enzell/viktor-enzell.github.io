@@ -1,13 +1,33 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Button from "@material-ui/core/Button";
-import { headerHeight, footerHeight, topMargin } from "./Home";
-import { Divider } from "@material-ui/core";
+import {
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardActions,
+  CardMedia,
+  Button,
+  Divider,
+} from "@material-ui/core";
+import {
+  headerHeight,
+  footerHeight,
+  topMargin,
+  smBreakpointWidth,
+} from "./Home";
+import useWindowDimensions from "../hooks/useWindowDimensions";
+import img1 from "../img/dalle/A robot transcribing a human speaker, oil painting.jpg";
+import img2 from "../img/dalle/A fast paced horse race from a distance, oil painting.jpg";
+import img3 from "../img/dalle/A robot teaching sign language, oil painting.jpg";
+import img4 from "../img/dalle/A newsstand salesman recommending newspapers, oil painting.jpg";
+import img5 from "../img/dalle/A tweeting bird, oil painting.jpg";
+import img6 from "../img/dalle/Scandinavian interior design, oil painting.jpg";
+import img7 from "../img/dalle/Three clouds in different colors, oil painting.jpg";
+import img8 from "../img/dalle/A Barcelona building in the Eixample district, oil painting.jpg";
+import img9 from "../img/dalle/Mariokart gameplay from above, oil painting.jpg";
+import img10 from "../img/dalle/Two kids drawing on the same note, oil painting.jpg";
+import img11 from "../img/dalle/A world map with pins on different nations, oil painting.jpg";
 
 const useStyles = makeStyles({
   root: {
@@ -29,10 +49,21 @@ const useStyles = makeStyles({
     borderWidth: "1px",
     boxShadow: "none",
   },
+  cardImage: {
+    height: "180px",
+  },
+  cardImageSM: {
+    height: "280px",
+  },
 });
+
+const getImageName = (img) => {
+  return img.split("/")[3].split(".")[0];
+};
 
 export default function Portfolio() {
   const classes = useStyles();
+  const { width } = useWindowDimensions();
 
   return (
     <div className={classes.root}>
@@ -43,6 +74,10 @@ export default function Portfolio() {
         This is a selection of projects I have previously worked on. It's a
         mixture of university, work, and hobby projects that I have shortly
         summarized and added links to further resources.
+        <br />
+        <br />I have generated all the images using the generative AI model
+        DALL-E 2 from OpenAI. The prompts used to generate the images are
+        included in the alt-attributes of each image.
       </Typography>
 
       <Divider />
@@ -50,12 +85,17 @@ export default function Portfolio() {
       <Grid container spacing={3} className={classes.portfolioGrid}>
         <Grid item xs={12}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img1}
+              alt={getImageName(img1)}
+              className={
+                width > smBreakpointWidth
+                  ? classes.cardImageSM
+                  : classes.cardImage
+              }
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="talking emoji">
-                  🗣
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Swedish Speech-to-text
               </Typography>
@@ -111,12 +151,17 @@ export default function Portfolio() {
 
         <Grid item xs={12}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img2}
+              alt={getImageName(img2)}
+              className={
+                width > smBreakpointWidth
+                  ? classes.cardImageSM
+                  : classes.cardImage
+              }
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="man on horse emoji">
-                  🏇
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Employment at Bricco
               </Typography>
@@ -154,12 +199,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img3}
+              alt={getImageName(img3)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="pointing up emoji">
-                  ☝️
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Sign Language Teacher
               </Typography>
@@ -188,12 +234,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img4}
+              alt={getImageName(img4)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="news paper emoji">
-                  📰
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 News Recommender
               </Typography>
@@ -222,12 +269,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img5}
+              alt={getImageName(img5)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="talk bubble emoji">
-                  💬
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Tweet Analyzer
               </Typography>
@@ -254,12 +302,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img6}
+              alt={getImageName(img6)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="house emoji">
-                  🏡
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Business Website Design
               </Typography>
@@ -282,12 +331,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img7}
+              alt={getImageName(img7)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="robot emoji">
-                  🤖
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Dataless Text Classification with BERT
               </Typography>
@@ -315,12 +365,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img8}
+              alt={getImageName(img8)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="building emoji">
-                  🏢
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Property Investment Analyzer
               </Typography>
@@ -349,12 +400,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img9}
+              alt={getImageName(img9)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="joystick emoji">
-                  🕹
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Reinforcement Learning Racing Game
               </Typography>
@@ -381,12 +433,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img10}
+              alt={getImageName(img10)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="note emoji">
-                  📝
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Collaborative Real-time Notes App
               </Typography>
@@ -413,12 +466,13 @@ export default function Portfolio() {
 
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
+            <CardMedia
+              image={img11}
+              alt={getImageName(img11)}
+              className={classes.cardImage}
+              component="img"
+            />
             <CardContent>
-              <Typography gutterBottom variant="body2">
-                <span role="img" aria-label="pin emoji">
-                  📍
-                </span>
-              </Typography>
               <Typography gutterBottom variant="h3" component="h2">
                 Visit List
               </Typography>

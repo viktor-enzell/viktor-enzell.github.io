@@ -1,9 +1,7 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import { Container, Grid, CssBaseline } from "@material-ui/core";
 import grey from "@material-ui/core/colors/grey";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { HashRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar";

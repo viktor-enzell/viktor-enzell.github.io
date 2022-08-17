@@ -1,14 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import Typography from "@material-ui/core/Typography";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
+import {
+  Typography,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+  Grid,
+} from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Grid from "@material-ui/core/Grid";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 export const slimWidth = 700;
@@ -136,7 +138,11 @@ export default function Home() {
               href="https://huggingface.co/viktor-enzell"
             >
               <ListItemIcon className={classes.contactListIcon}>
-                <span role="img" aria-label="hugging face emoji" className={classes.huggingfaceIcon}>
+                <span
+                  role="img"
+                  aria-label="hugging face emoji"
+                  className={classes.huggingfaceIcon}
+                >
                   🤗
                 </span>
               </ListItemIcon>
