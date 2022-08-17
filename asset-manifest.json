@@ -1,22 +1,33 @@
 {
   "files": {
     "main.css": "/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/static/js/main.9f130c7e.chunk.js",
-    "main.js.map": "/static/js/main.9f130c7e.chunk.js.map",
+    "main.js": "/static/js/main.4cc4cdd1.chunk.js",
+    "main.js.map": "/static/js/main.4cc4cdd1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.2e25cb46.chunk.js": "/static/js/2.2e25cb46.chunk.js",
-    "static/js/2.2e25cb46.chunk.js.map": "/static/js/2.2e25cb46.chunk.js.map",
+    "static/js/2.10a09728.chunk.js": "/static/js/2.10a09728.chunk.js",
+    "static/js/2.10a09728.chunk.js.map": "/static/js/2.10a09728.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.03dcd44d88b9d1554408d1f08e86dee4.js": "/precache-manifest.03dcd44d88b9d1554408d1f08e86dee4.js",
+    "precache-manifest.57d5ed20441067fea27fcf4471f97a39.js": "/precache-manifest.57d5ed20441067fea27fcf4471f97a39.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.2e25cb46.chunk.js.LICENSE.txt": "/static/js/2.2e25cb46.chunk.js.LICENSE.txt"
+    "static/js/2.10a09728.chunk.js.LICENSE.txt": "/static/js/2.10a09728.chunk.js.LICENSE.txt",
+    "static/media/A Barcelona building in the Eixample district, oil painting.jpg": "/static/media/A Barcelona building in the Eixample district, oil painting.bb3b8010.jpg",
+    "static/media/A fast paced horse race from a distance, oil painting.jpg": "/static/media/A fast paced horse race from a distance, oil painting.7f1ac7a1.jpg",
+    "static/media/A newsstand salesman recommending newspapers, oil painting.jpg": "/static/media/A newsstand salesman recommending newspapers, oil painting.d7267cd9.jpg",
+    "static/media/A robot teaching sign language, oil painting.jpg": "/static/media/A robot teaching sign language, oil painting.f6032b43.jpg",
+    "static/media/A robot transcribing a human speaker, oil painting.jpg": "/static/media/A robot transcribing a human speaker, oil painting.0118a04a.jpg",
+    "static/media/A tweeting bird, oil painting.jpg": "/static/media/A tweeting bird, oil painting.9c71d2fb.jpg",
+    "static/media/A world map with pins on different nations, oil painting.jpg": "/static/media/A world map with pins on different nations, oil painting.3bd22858.jpg",
+    "static/media/Mariokart gameplay from above, oil painting.jpg": "/static/media/Mariokart gameplay from above, oil painting.c5551725.jpg",
+    "static/media/Scandinavian interior design, oil painting.jpg": "/static/media/Scandinavian interior design, oil painting.543dabfc.jpg",
+    "static/media/Three clouds in different colors, oil painting.jpg": "/static/media/Three clouds in different colors, oil painting.c7e2fcdd.jpg",
+    "static/media/Two kids drawing on the same note, oil painting.jpg": "/static/media/Two kids drawing on the same note, oil painting.c1353eb4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.2e25cb46.chunk.js",
+    "static/js/2.10a09728.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.9f130c7e.chunk.js"
+    "static/js/main.4cc4cdd1.chunk.js"
   ]
 }
