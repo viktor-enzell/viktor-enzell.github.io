@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5dd9e9099e46eb571347ddec81736d46",
+    "revision": "6a749e89d6ca4f722385243112e197e7",
     "url": "/index.html"
   },
   {
-    "revision": "d838bffc99045f8d88d8",
+    "revision": "bc4b81b24375b2863a79",
     "url": "/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.10a09728.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d838bffc99045f8d88d8",
-    "url": "/static/js/main.4cc4cdd1.chunk.js"
+    "revision": "bc4b81b24375b2863a79",
+    "url": "/static/js/main.c34547d0.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/A newsstand salesman recommending newspapers, oil painting.d7267cd9.jpg"
   },
   {
-    "revision": "f6032b43143b7a485b1d9a59324af905",
-    "url": "/static/media/A robot teaching sign language, oil painting.f6032b43.jpg"
+    "revision": "d38ff659b5a0790634665c3dd2086c1d",
+    "url": "/static/media/A robot teaching sign language, oil painting.d38ff659.jpg"
   },
   {
     "revision": "0118a04a661660dc6fc6edf701704d3e",
