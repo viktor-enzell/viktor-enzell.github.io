@@ -9,6 +9,7 @@ import {
   CardMedia,
   Button,
   Divider,
+  Link,
 } from "@material-ui/core";
 import {
   headerHeight,
@@ -111,9 +112,19 @@ export default function Portfolio() {
                 Swedish Common Voice test set.
                 <br />
                 <br />
-                The generic model can be accessed through Hugging Face directly
-                or by using the TMH Python package where it is integrated. A
-                link to the full thesis report will be included shortly.
+                {"Link to the full report: "}
+                <Link 
+                  href="https://www.diva-portal.org/smash/get/diva2:1701482/FULLTEXT01.pdf" 
+                  target="_blank" 
+                  color="inherit"
+                >
+                  {"Master's thesis"}
+                </Link>.
+                <br />
+                <br />
+                The open-sourced model can be accessed through Hugging Face
+                or by using the TMH PyPi package where it is integrated. 
+                The links below lead to the different model resources.
               </Typography>
             </CardContent>
             <CardActions>
