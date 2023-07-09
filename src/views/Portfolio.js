@@ -98,6 +98,97 @@ export default function Portfolio() {
             />
             <CardContent>
               <Typography gutterBottom variant="h3" component="h2">
+                Employment at All Ears
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                ADD TAGS
+              </Typography>
+              <Typography>ADD DESCRIPTION</Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://huggingface.co/viktor-enzell/wav2vec2-large-voxrex-swedish-4gram"
+                target="_blank"
+              >
+                ADD LINK
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <Card className={classes.card}>
+            <CardMedia
+              image={img3}
+              alt={getImageName(img3)}
+              className={classes.cardImage}
+              component="img"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h3" component="h2">
+                Public API for Speech Detection
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                ADD TAGS
+              </Typography>
+              <Typography>ADD DESCRIPTION</Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/sign-language-teacher"
+                target="_blank"
+              >
+                ADD LINK
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <Card className={classes.card}>
+            <CardMedia
+              image={img4}
+              alt={getImageName(img4)}
+              className={classes.cardImage}
+              component="img"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h3" component="h2">
+                Open Source contributions to yt-dlp
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                ADD TAGS
+              </Typography>
+              <Typography>ADD DESCRIPTION</Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/viktor-enzell/news-recommender"
+                target="_blank"
+              >
+                ADD LINK
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Card className={classes.card}>
+            <CardMedia
+              image={img1}
+              alt={getImageName(img1)}
+              className={
+                width > smBreakpointWidth
+                  ? classes.cardImageSM
+                  : classes.cardImage
+              }
+              component="img"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h3" component="h2">
                 Swedish Speech-to-text
               </Typography>
               <Typography gutterBottom color="textSecondary">
@@ -113,18 +204,19 @@ export default function Portfolio() {
                 <br />
                 <br />
                 {"Link to the full report: "}
-                <Link 
-                  href="https://www.diva-portal.org/smash/get/diva2:1701482/FULLTEXT01.pdf" 
-                  target="_blank" 
+                <Link
+                  href="https://www.diva-portal.org/smash/get/diva2:1701482/FULLTEXT01.pdf"
+                  target="_blank"
                   color="inherit"
                 >
                   {"Master's thesis"}
-                </Link>.
+                </Link>
+                .
                 <br />
                 <br />
-                The open-sourced model can be accessed through Hugging Face
-                or by using the TMH PyPi package where it is integrated. 
-                The links below lead to the different model resources.
+                The open-sourced model can be accessed through Hugging Face or
+                by using the TMH PyPi package where it is integrated. The links
+                below lead to the different model resources.
               </Typography>
             </CardContent>
             <CardActions>
