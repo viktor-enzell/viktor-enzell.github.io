@@ -18,6 +18,9 @@ import {
   smBreakpointWidth,
 } from "./Home";
 import useWindowDimensions from "../hooks/useWindowDimensions";
+import img12 from "../img/dalle/Many old school microphones floating freely on a purple background, oil painting.jpg";
+import img13 from "../img/dalle/Earth from space, oil painting.jpg";
+import img14 from "../img/dalle/An old school tv, oil painting.jpg";
 import img1 from "../img/dalle/A robot transcribing a human speaker, oil painting.jpg";
 import img2 from "../img/dalle/A fast paced horse race from a distance, oil painting.jpg";
 import img3 from "../img/dalle/A robot teaching sign language, oil painting.jpg";
@@ -87,8 +90,8 @@ export default function Portfolio() {
         <Grid item xs={12}>
           <Card className={classes.card}>
             <CardMedia
-              image={img1}
-              alt={getImageName(img1)}
+              image={img12}
+              alt={getImageName(img12)}
               className={
                 width > smBreakpointWidth
                   ? classes.cardImageSM
@@ -120,8 +123,8 @@ export default function Portfolio() {
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
             <CardMedia
-              image={img3}
-              alt={getImageName(img3)}
+              image={img13}
+              alt={getImageName(img13)}
               className={classes.cardImage}
               component="img"
             />
@@ -149,8 +152,8 @@ export default function Portfolio() {
         <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
             <CardMedia
-              image={img4}
-              alt={getImageName(img4)}
+              image={img14}
+              alt={getImageName(img14)}
               className={classes.cardImage}
               component="img"
             />
