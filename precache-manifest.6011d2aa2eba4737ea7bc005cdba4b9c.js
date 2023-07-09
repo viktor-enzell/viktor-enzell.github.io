@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9cc9acb7f0e0b9c697ce5be7f8f5f9e8",
+    "revision": "c79079d8fa5765522fc2b29c375a6622",
     "url": "/index.html"
   },
   {
-    "revision": "2267afe8234eb4eba2b9",
+    "revision": "0e1b64ab9b48aa20e3c6",
     "url": "/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "232a257249d3648786e3",
-    "url": "/static/js/2.f0b0e275.chunk.js"
+    "revision": "ac23943f57b1decc4ca4",
+    "url": "/static/js/2.84e0f5bc.chunk.js"
   },
   {
     "revision": "b7e86ad4d38b1a88ab44b6670b221c75",
-    "url": "/static/js/2.f0b0e275.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.84e0f5bc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2267afe8234eb4eba2b9",
-    "url": "/static/js/main.23654965.chunk.js"
+    "revision": "0e1b64ab9b48aa20e3c6",
+    "url": "/static/js/main.5695629f.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -50,6 +50,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3bd22858f07382d2680755a37b31538c",
     "url": "/static/media/A world map with pins on different nations, oil painting.3bd22858.jpg"
+  },
+  {
+    "revision": "1d35a54ac8e942559b3d7ff386cb232a",
+    "url": "/static/media/An old school tv, oil painting.1d35a54a.jpg"
+  },
+  {
+    "revision": "9a8a40fb645a95a173fda4f0da3250ca",
+    "url": "/static/media/Earth from space, oil painting.9a8a40fb.jpg"
+  },
+  {
+    "revision": "1c73b837956fc0d5a6809006a63ac3a4",
+    "url": "/static/media/Many old school microphones floating freely on a purple background, oil painting.1c73b837.jpg"
   },
   {
     "revision": "c555172535b20237113bddc6052512d0",

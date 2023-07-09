@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/static/js/main.23654965.chunk.js",
-    "main.js.map": "/static/js/main.23654965.chunk.js.map",
+    "main.js": "/static/js/main.5695629f.chunk.js",
+    "main.js.map": "/static/js/main.5695629f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.f0b0e275.chunk.js": "/static/js/2.f0b0e275.chunk.js",
-    "static/js/2.f0b0e275.chunk.js.map": "/static/js/2.f0b0e275.chunk.js.map",
+    "static/js/2.84e0f5bc.chunk.js": "/static/js/2.84e0f5bc.chunk.js",
+    "static/js/2.84e0f5bc.chunk.js.map": "/static/js/2.84e0f5bc.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.adee014a7bea06634a7815ab57504b16.js": "/precache-manifest.adee014a7bea06634a7815ab57504b16.js",
+    "precache-manifest.6011d2aa2eba4737ea7bc005cdba4b9c.js": "/precache-manifest.6011d2aa2eba4737ea7bc005cdba4b9c.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.f0b0e275.chunk.js.LICENSE.txt": "/static/js/2.f0b0e275.chunk.js.LICENSE.txt",
+    "static/js/2.84e0f5bc.chunk.js.LICENSE.txt": "/static/js/2.84e0f5bc.chunk.js.LICENSE.txt",
     "static/media/A Barcelona building in the Eixample district, oil painting.jpg": "/static/media/A Barcelona building in the Eixample district, oil painting.bb3b8010.jpg",
     "static/media/A fast paced horse race from a distance, oil painting.jpg": "/static/media/A fast paced horse race from a distance, oil painting.7f1ac7a1.jpg",
     "static/media/A newsstand salesman recommending newspapers, oil painting.jpg": "/static/media/A newsstand salesman recommending newspapers, oil painting.d7267cd9.jpg",
@@ -19,6 +19,9 @@
     "static/media/A robot transcribing a human speaker, oil painting.jpg": "/static/media/A robot transcribing a human speaker, oil painting.0118a04a.jpg",
     "static/media/A tweeting bird, oil painting.jpg": "/static/media/A tweeting bird, oil painting.9c71d2fb.jpg",
     "static/media/A world map with pins on different nations, oil painting.jpg": "/static/media/A world map with pins on different nations, oil painting.3bd22858.jpg",
+    "static/media/An old school tv, oil painting.jpg": "/static/media/An old school tv, oil painting.1d35a54a.jpg",
+    "static/media/Earth from space, oil painting.jpg": "/static/media/Earth from space, oil painting.9a8a40fb.jpg",
+    "static/media/Many old school microphones floating freely on a purple background, oil painting.jpg": "/static/media/Many old school microphones floating freely on a purple background, oil painting.1c73b837.jpg",
     "static/media/Mariokart gameplay from above, oil painting.jpg": "/static/media/Mariokart gameplay from above, oil painting.c5551725.jpg",
     "static/media/Scandinavian interior design, oil painting.jpg": "/static/media/Scandinavian interior design, oil painting.543dabfc.jpg",
     "static/media/Three clouds in different colors, oil painting.jpg": "/static/media/Three clouds in different colors, oil painting.c7e2fcdd.jpg",
@@ -26,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.f0b0e275.chunk.js",
+    "static/js/2.84e0f5bc.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.23654965.chunk.js"
+    "static/js/main.5695629f.chunk.js"
   ]
 }
