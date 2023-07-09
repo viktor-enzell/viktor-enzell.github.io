@@ -109,12 +109,8 @@ export default function Portfolio() {
               <Typography>ADD DESCRIPTION</Typography>
             </CardContent>
             <CardActions>
-              <Button
-                size="small"
-                href="https://huggingface.co/viktor-enzell/wav2vec2-large-voxrex-swedish-4gram"
-                target="_blank"
-              >
-                ADD LINK
+              <Button size="small" href="https://allears.ai/" target="_blank">
+                ALLEARS.AI
               </Button>
             </CardActions>
           </Card>
@@ -140,10 +136,10 @@ export default function Portfolio() {
             <CardActions>
               <Button
                 size="small"
-                href="https://github.com/viktor-enzell/sign-language-teacher"
+                href="https://rapidapi.com/viktorenzell/api/speech-detection/"
                 target="_blank"
               >
-                ADD LINK
+                RAPID API HUB
               </Button>
             </CardActions>
           </Card>
@@ -169,10 +165,10 @@ export default function Portfolio() {
             <CardActions>
               <Button
                 size="small"
-                href="https://github.com/viktor-enzell/news-recommender"
+                href="https://github.com/yt-dlp/yt-dlp"
                 target="_blank"
               >
-                ADD LINK
+                GITHUB REPO
               </Button>
             </CardActions>
           </Card>
