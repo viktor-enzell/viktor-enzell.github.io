@@ -104,9 +104,13 @@ export default function Portfolio() {
                 Employment at All Ears
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                ADD TAGS
+                Full stack, Machine Learning, DevOps
               </Typography>
-              <Typography>ADD DESCRIPTION</Typography>
+              <Typography>
+                Currently, I work full-time as a developer at All Ears. We
+                develop a SaaS product for monitoring brand mentions in spoken
+                media outlets like TikTok, Podcasts, Radio, and YouTube.
+              </Typography>
             </CardContent>
             <CardActions>
               <Button size="small" href="https://allears.ai/" target="_blank">
@@ -129,9 +133,13 @@ export default function Portfolio() {
                 Public API for Speech Detection
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                ADD TAGS
+                FastAPI, Docker, Machine Learning
               </Typography>
-              <Typography>ADD DESCRIPTION</Typography>
+              <Typography>
+                An API for Speech Detection (Voice Activity Detection) that I
+                built and host on Google Cloud Run. It is publicly available on
+                the API hub RapidAPI.
+              </Typography>
             </CardContent>
             <CardActions>
               <Button
@@ -158,9 +166,13 @@ export default function Portfolio() {
                 Open Source contributions to yt-dlp
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                ADD TAGS
+                Python, Web scraping
               </Typography>
-              <Typography>ADD DESCRIPTION</Typography>
+              <Typography>
+                yt-dlp is a tool for downloading audio and video content from
+                various platforms. I have contributed to the repo by fixing bugs
+                in spiders.
+              </Typography>
             </CardContent>
             <CardActions>
               <Button
