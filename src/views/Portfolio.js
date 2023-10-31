@@ -120,72 +120,6 @@ export default function Portfolio() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img13}
-              alt={getImageName(img13)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h3" component="h2">
-                Public API for Speech Detection
-              </Typography>
-              <Typography gutterBottom color="textSecondary">
-                FastAPI, Docker, Machine Learning
-              </Typography>
-              <Typography>
-                An API for Speech Detection (Voice Activity Detection) that I
-                built and host on Google Cloud Run. It is publicly available on
-                the API hub RapidAPI.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                href="https://rapidapi.com/viktorenzell/api/speech-detection/"
-                target="_blank"
-              >
-                RAPID API HUB
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img14}
-              alt={getImageName(img14)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h3" component="h2">
-                Open Source contributions to yt-dlp
-              </Typography>
-              <Typography gutterBottom color="textSecondary">
-                Python, Web scraping
-              </Typography>
-              <Typography>
-                yt-dlp is a tool for downloading audio and video content from
-                various platforms. I have contributed to the repo by fixing bugs
-                in spiders.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                href="https://github.com/yt-dlp/yt-dlp"
-                target="_blank"
-              >
-                GITHUB REPO
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
         <Grid item xs={12}>
           <Card className={classes.card}>
             <CardMedia
@@ -306,6 +240,39 @@ export default function Portfolio() {
                 target="_blank"
               >
                 svenskgalopp.se
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <Card className={classes.card}>
+            <CardMedia
+              image={img14}
+              alt={getImageName(img14)}
+              className={classes.cardImage}
+              component="img"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h3" component="h2">
+                Open Source contributions to yt-dlp
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                Python, Web scraping
+              </Typography>
+              <Typography>
+                yt-dlp is a tool for downloading audio and video content from
+                various platforms. I have contributed to the repo by fixing bugs
+                in spiders.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                href="https://github.com/yt-dlp/yt-dlp"
+                target="_blank"
+              >
+                GITHUB REPO
               </Button>
             </CardActions>
           </Card>
