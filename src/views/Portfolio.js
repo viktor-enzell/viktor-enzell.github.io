@@ -143,9 +143,9 @@ export default function Portfolio() {
                 In my Master's thesis at KTH, I trained language models to
                 improve a Swedish open-source speech-to-text model for a
                 specific domain. The domain-specific language models are not
-                open-sourced but I trained a generic language model which is
-                currently the highest ranking speech-to-text model on the
-                Swedish Common Voice test set.
+                open-sourced but I trained a generic language model which at the
+                time was the highest ranking speech-to-text model on the Swedish
+                Common Voice test set.
                 <br />
                 <br />
                 {"Link to the full report: "}

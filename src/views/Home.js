@@ -76,7 +76,7 @@ export default function Home() {
             Developer
           </Typography>
           <Typography gutterBottom>
-            Hello! My name is Viktor Enzell. I'm a full stack developer based in
+            Hello! My name is Viktor. I'm a full stack developer based in
             Stockholm who enjoys building products that utilize machine
             learning. I have a Master's degree in Computer Science from KTH,
             where I specialized in AI, primarily focusing on natural language
