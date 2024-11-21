@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
 import {
   Typography,
   Grid,
@@ -10,7 +9,7 @@ import {
   Button,
   Divider,
   Link,
-} from "@material-ui/core";
+} from "@mui/material";
 import {
   headerHeight,
   footerHeight,
@@ -32,33 +31,47 @@ import img8 from "../img/dalle/A Barcelona building in the Eixample district, oi
 import img9 from "../img/dalle/Mariokart gameplay from above, oil painting.jpg";
 import img10 from "../img/dalle/Two kids drawing on the same note, oil painting.jpg";
 import img11 from "../img/dalle/A world map with pins on different nations, oil painting.jpg";
+import { styled } from "@mui/material/styles";
 
-const useStyles = makeStyles({
-  root: {
-    marginTop: topMargin,
+const Root = styled("div")(({ theme }) => ({
+  marginTop: topMargin,
+  height: "100%",
+  width: "100%",
+  minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
+}));
+
+const PortfolioGrid = styled(Grid)({
+  marginTop: "0px",
+  marginLeft: "-24px",
+});
+
+const TextParagraph = styled(Typography)({
+  marginBottom: "24px",
+});
+
+const StyledCard = styled(Card)({
+  borderStyle: "solid",
+  borderColor: "#e0e0e0",
+  borderWidth: "1px",
+  boxShadow: "none",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+});
+
+const StyledCardContent = styled(CardContent)({
+  flexGrow: 1,
+});
+
+const CardImageWrapper = styled("div")(({ theme, isLargeScreen }) => ({
+  height: isLargeScreen ? "280px" : "180px",
+}));
+
+const CardImageStyled = styled(CardMedia)({
+  height: "100%",
+  "& .MuiCardMedia-img": {
     height: "100%",
-    width: "100%",
-    minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
-  },
-  portfolioGrid: {
-    marginTop: "0px",
-    marginLeft: "-24px",
-  },
-  textParagraph: {
-    marginBottom: "24px",
-  },
-  card: {
-    borderStyle: "solid",
-    borderColor: "#e0e0e0",
-    borderWidth: "1px",
-    boxShadow: "none",
-    height: "100%",
-  },
-  cardImage: {
-    height: "180px",
-  },
-  cardImageSM: {
-    height: "280px",
+    objectFit: "cover",
   },
 });
 
@@ -67,15 +80,14 @@ const getImageName = (img) => {
 };
 
 export default function Portfolio() {
-  const classes = useStyles();
   const { width } = useWindowDimensions();
 
   return (
-    <div className={classes.root}>
+    <Root>
       <Typography variant="h1" gutterBottom>
         Portfolio
       </Typography>
-      <Typography className={classes.textParagraph}>
+      <TextParagraph>
         This is a selection of projects I have previously worked on. It's a
         mixture of university, work, and hobby projects that I have shortly
         summarized and added links to further resources.
@@ -83,24 +95,27 @@ export default function Portfolio() {
         <br />I have generated all the images using the generative AI model
         DALL-E 2 from OpenAI. The prompts used to generate the images are
         included in the alt-attributes of each image.
-      </Typography>
+      </TextParagraph>
 
       <Divider />
 
-      <Grid container spacing={3} className={classes.portfolioGrid}>
+      <PortfolioGrid container spacing={3}>
         <Grid item xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img13}
-              alt={getImageName(img13)}
-              className={
-                width > smBreakpointWidth
-                  ? classes.cardImageSM
-                  : classes.cardImage
-              }
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={width > smBreakpointWidth}>
+              <CardImageStyled
+                component="div"
+                image={img13}
+                alt={getImageName(img13)}
+              >
+                <img
+                  src={img13}
+                  alt={getImageName(img13)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Indie Development and Freelancing
               </Typography>
@@ -109,33 +124,36 @@ export default function Portfolio() {
               </Typography>
               <Typography>
                 As an indie developer and freelancer, I'm currently building
-                PodReader - a platform that transforms text content into audio
+                PodReader, a platform that transforms text content into audio
                 podcasts. In my freelance work, I specialize in AI, Python, and
                 full-stack JavaScript development. I'm always interested in
                 discussing new and exciting projects!
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button size="small" href="https://podreader.ai/" target="_blank">
                 PODREADER.AI
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img12}
-              alt={getImageName(img12)}
-              className={
-                width > smBreakpointWidth
-                  ? classes.cardImageSM
-                  : classes.cardImage
-              }
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={width > smBreakpointWidth}>
+              <CardImageStyled
+                component="div"
+                image={img12}
+                alt={getImageName(img12)}
+              >
+                <img
+                  src={img12}
+                  alt={getImageName(img12)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Employment at All Ears
               </Typography>
@@ -149,28 +167,31 @@ export default function Portfolio() {
                 media sources, including TikTok, podcasts, radio broadcasts, and
                 YouTube content.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button size="small" href="https://allears.ai/" target="_blank">
                 ALLEARS.AI
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img1}
-              alt={getImageName(img1)}
-              className={
-                width > smBreakpointWidth
-                  ? classes.cardImageSM
-                  : classes.cardImage
-              }
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={width > smBreakpointWidth}>
+              <CardImageStyled
+                component="div"
+                image={img1}
+                alt={getImageName(img1)}
+              >
+                <img
+                  src={img1}
+                  alt={getImageName(img1)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Swedish Speech-to-text
               </Typography>
@@ -201,7 +222,7 @@ export default function Portfolio() {
                 by using the TMH PyPi package where it is integrated. The links
                 below lead to the different model resources.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -232,22 +253,25 @@ export default function Portfolio() {
                 leaderboard
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img2}
-              alt={getImageName(img2)}
-              className={
-                width > smBreakpointWidth
-                  ? classes.cardImageSM
-                  : classes.cardImage
-              }
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={width > smBreakpointWidth}>
+              <CardImageStyled
+                component="div"
+                image={img2}
+                alt={getImageName(img2)}
+              >
+                <img
+                  src={img2}
+                  alt={getImageName(img2)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Employment at Bricco
               </Typography>
@@ -270,7 +294,7 @@ export default function Portfolio() {
                 Below is a link to a website I was part in creating from start
                 to finish.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -280,18 +304,25 @@ export default function Portfolio() {
                 svenskgalopp.se
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img14}
-              alt={getImageName(img14)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img14}
+                alt={getImageName(img14)}
+              >
+                <img
+                  src={img14}
+                  alt={getImageName(img14)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Open Source contributions to yt-dlp
               </Typography>
@@ -303,7 +334,7 @@ export default function Portfolio() {
                 various platforms. I have contributed to the repo by fixing bugs
                 in spiders.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -313,18 +344,25 @@ export default function Portfolio() {
                 GITHUB REPO
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img3}
-              alt={getImageName(img3)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img3}
+                alt={getImageName(img3)}
+              >
+                <img
+                  src={img3}
+                  alt={getImageName(img3)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Sign Language Teacher
               </Typography>
@@ -338,7 +376,7 @@ export default function Portfolio() {
                 a classifier for sign language. Using this classifier, we built
                 a program for teaching sign language.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -348,18 +386,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img4}
-              alt={getImageName(img4)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img4}
+                alt={getImageName(img4)}
+              >
+                <img
+                  src={img4}
+                  alt={getImageName(img4)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 News Recommender
               </Typography>
@@ -373,7 +418,7 @@ export default function Portfolio() {
                 space by training a doc2vec model on news articles. Done as a
                 group project at KTH.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -383,18 +428,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img5}
-              alt={getImageName(img5)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img5}
+                alt={getImageName(img5)}
+              >
+                <img
+                  src={img5}
+                  alt={getImageName(img5)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Tweet Analyzer
               </Typography>
@@ -406,7 +458,7 @@ export default function Portfolio() {
                 and sentiment. Done as a group project at the Master in
                 Artificial Intelligence at UPC in Barcelona.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -416,18 +468,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img6}
-              alt={getImageName(img6)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img6}
+                alt={getImageName(img6)}
+              >
+                <img
+                  src={img6}
+                  alt={getImageName(img6)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Business Website Design
               </Typography>
@@ -439,24 +498,31 @@ export default function Portfolio() {
                 website. It's a multi-faceted business involved in interior
                 design, events, clothing, and a cafe.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button size="small" href="https://byhuset.se" target="_blank">
                 byhuset.se
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img7}
-              alt={getImageName(img7)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img7}
+                alt={getImageName(img7)}
+              >
+                <img
+                  src={img7}
+                  alt={getImageName(img7)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Dataless Text Classification with BERT
               </Typography>
@@ -469,7 +535,7 @@ export default function Portfolio() {
                 this repo contains the code for reproducing the experiments.
                 Done in a group of two, at the Master in AI at UPC.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -479,18 +545,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img8}
-              alt={getImageName(img8)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img8}
+                alt={getImageName(img8)}
+              >
+                <img
+                  src={img8}
+                  alt={getImageName(img8)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Property Investment Analyzer
               </Typography>
@@ -504,7 +577,7 @@ export default function Portfolio() {
                 API for generating a property description. Done as a group
                 project at the Master in AI at UPC.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -514,18 +587,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img9}
-              alt={getImageName(img9)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img9}
+                alt={getImageName(img9)}
+              >
+                <img
+                  src={img9}
+                  alt={getImageName(img9)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Reinforcement Learning Racing Game
               </Typography>
@@ -537,7 +617,7 @@ export default function Portfolio() {
                 train the opponents. Done as a group project at the Master in AI
                 at UPC.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -547,18 +627,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img10}
-              alt={getImageName(img10)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img10}
+                alt={getImageName(img10)}
+              >
+                <img
+                  src={img10}
+                  alt={getImageName(img10)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Collaborative Real-time Notes App
               </Typography>
@@ -570,7 +657,7 @@ export default function Portfolio() {
                 app. Done as a group project during my Bachelor studies at
                 Uppsala University.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -580,18 +667,25 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
 
         <Grid item xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              image={img11}
-              alt={getImageName(img11)}
-              className={classes.cardImage}
-              component="img"
-            />
-            <CardContent>
+          <StyledCard>
+            <CardImageWrapper isLargeScreen={false}>
+              <CardImageStyled
+                component="div"
+                image={img11}
+                alt={getImageName(img11)}
+              >
+                <img
+                  src={img11}
+                  alt={getImageName(img11)}
+                  style={{ display: "none" }}
+                />
+              </CardImageStyled>
+            </CardImageWrapper>
+            <StyledCardContent>
               <Typography gutterBottom variant="h3" component="h2">
                 Visit List
               </Typography>
@@ -602,7 +696,7 @@ export default function Portfolio() {
                 Playing around with Java and the Spring Framework to create a
                 REST API backend for a visit list with a React client.
               </Typography>
-            </CardContent>
+            </StyledCardContent>
             <CardActions>
               <Button
                 size="small"
@@ -612,9 +706,9 @@ export default function Portfolio() {
                 Github repo
               </Button>
             </CardActions>
-          </Card>
+          </StyledCard>
         </Grid>
-      </Grid>
-    </div>
+      </PortfolioGrid>
+    </Root>
   );
 }

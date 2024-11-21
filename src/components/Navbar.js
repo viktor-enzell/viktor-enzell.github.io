@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
+import { styled } from "@mui/material/styles";
 import {
   ListItemText,
   ListItem,
@@ -11,8 +11,8 @@ import {
   List,
   Tabs,
   Tab,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { headerHeight } from "../views/Home";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import { Link } from "react-router-dom";
@@ -24,64 +24,72 @@ const swapNavbarWidth = 960;
 const activeButtonColor = "#eeeeee";
 const toolBarMaxWidth = slimWidth - 48;
 
-const useStyles = makeStyles({
-  root: {
-    height: headerHeight,
-  },
-  appBar: {
-    backgroundColor: "white",
-    display: "flex",
-    alignItems: "center",
-    boxShadow: "none",
-  },
-  toolBar: {
-    maxWidth: toolBarMaxWidth,
-    width: "100%",
-    justifyContent: "flex-end",
-    height: headerHeight,
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
-  drawer: {
+const Root = styled('div')({
+  height: headerHeight,
+});
+
+const StyledAppBar = styled(AppBar)({
+  backgroundColor: "white",
+  display: "flex",
+  alignItems: "center",
+  boxShadow: "none",
+});
+
+const StyledToolbar = styled(Toolbar)({
+  maxWidth: toolBarMaxWidth,
+  width: "100%",
+  justifyContent: "flex-end",
+  height: headerHeight,
+  paddingLeft: 0,
+  paddingRight: 0,
+});
+
+const StyledDrawer = styled(Drawer)({
+  width: drawerWidth,
+  flexShrink: 0,
+  '& .MuiDrawer-paper': {
     width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  appBarDivider: {
-    width: "100%",
-  },
-  tab: {
-    minWidth: "100px",
-    textDecoration: "none",
-    color: "black",
-  },
-  link: { textDecoration: "none", color: "black" },
-  menuButton: {
-    marginRight: "16px",
   },
 });
 
+const AppBarDivider = styled(Divider)({
+  width: "100%",
+});
+
+const StyledTab = styled(Tab)({
+  minWidth: "100px",
+  textDecoration: "none",
+  color: "black",
+});
+
+const StyledLink = styled(Link)({
+  textDecoration: "none",
+  color: "black",
+});
+
+const MenuButtonStyled = styled(IconButton)({
+  marginRight: "16px",
+});
+
 export default function Navbar() {
-  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const { width } = useWindowDimensions();
   const { pathname } = useLocation();
 
+  const tabValue = ["/", "/portfolio"].indexOf(pathname);
+
   return (
-    <div className={classes.root}>
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar className={classes.toolBar}>
+    <Root>
+      <StyledAppBar position="fixed">
+        <StyledToolbar>
           {width > swapNavbarWidth ? (
-            <Tabs>
+            <Tabs value={tabValue}>
               {[
                 { key: "/", name: "Home" },
                 { key: "/portfolio", name: "Portfolio" },
               ].map((item) => (
-                <Tab
+                <StyledTab
                   label={item.name}
-                  className={classes.tab}
                   style={{
                     backgroundColor: pathname === item.key && activeButtonColor,
                   }}
@@ -92,24 +100,21 @@ export default function Navbar() {
               ))}
             </Tabs>
           ) : (
-            <IconButton
+            <MenuButtonStyled
               color="inherit"
               aria-label="open drawer"
-              className={classes.menuButton}
               onClick={() => setOpen(true)}
             >
               <MenuIcon />
-            </IconButton>
+            </MenuButtonStyled>
           )}
-        </Toolbar>
-        <Divider className={classes.appBarDivider} />
-      </AppBar>
-      <Drawer
-        className={classes.drawer}
+        </StyledToolbar>
+        <AppBarDivider />
+      </StyledAppBar>
+      <StyledDrawer
         variant="temporary"
         anchor="right"
         open={open}
-        classes={{ paper: classes.drawerPaper }}
         ModalProps={{ onBackdropClick: () => setOpen(false) }}
       >
         <List>
@@ -117,7 +122,7 @@ export default function Navbar() {
             { key: "/", name: "Home" },
             { key: "/portfolio", name: "Portfolio" },
           ].map((item) => (
-            <Link to={item.key} key={item.key} className={classes.link}>
+            <StyledLink to={item.key} key={item.key}>
               <ListItem
                 button
                 key={item.key}
@@ -128,15 +133,12 @@ export default function Navbar() {
                   backgroundColor: pathname === item.key && activeButtonColor,
                 }}
               >
-                <ListItemText
-                  primary={item.name}
-                  classes={{ primary: classes.listItem }}
-                />
+                <ListItemText primary={item.name} />
               </ListItem>
-            </Link>
+            </StyledLink>
           ))}
         </List>
-      </Drawer>
-    </div>
+      </StyledDrawer>
+    </Root>
   );
 }

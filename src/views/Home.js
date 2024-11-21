@@ -1,16 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
+import { styled } from "@mui/material/styles";
 import {
   Typography,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   Divider,
   Grid,
-} from "@material-ui/core";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
+} from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 export const slimWidth = 700;
@@ -19,57 +18,56 @@ export const footerHeight = 100;
 export const topMargin = 64;
 export const smBreakpointWidth = 600;
 
-const useStyles = makeStyles({
-  root: {
-    marginTop: topMargin,
-    height: "100%",
-    width: "100%",
-    textAlign: "center",
-    minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
-  },
-  contactList: {
-    maxWidth: slimWidth,
-    width: "100%",
-    marginLeft: "auto",
-    marginRight: "auto",
-    paddingTop: "0px",
-  },
-  contactListIcon: {
-    color: "black",
-  },
-  verticalDividerContainer: {
-    position: "relative",
-  },
-  verticalDivider: {
-    position: "absolute",
-    height: "100%",
-  },
-  horizontalDivider: {
-    width: "100%",
-    marginTop: "24px",
-  },
-  huggingfaceIcon: {
-    fontSize: "23px",
-    filter: "grayscale(100%)",
-  },
-  textContainerSM: {
-    paddingRight: "16px",
-  },
+const Root = styled('div')(({ theme }) => ({
+  marginTop: topMargin,
+  height: "100%",
+  width: "100%",
+  textAlign: "center",
+  minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
+}));
+
+const ContactList = styled(List)({
+  maxWidth: slimWidth,
+  width: "100%",
+  marginLeft: "auto",
+  marginRight: "auto",
+  paddingTop: "0px",
 });
 
+const ContactListIcon = styled('div')({
+  color: "black",
+});
+
+const VerticalDividerContainer = styled('div')({
+  position: "relative",
+});
+
+const VerticalDividerStyled = styled(Divider)({
+  position: "absolute",
+  height: "100%",
+});
+
+const HorizontalDividerStyled = styled(Divider)({
+  width: "100%",
+  marginTop: "24px",
+});
+
+const HuggingFaceIcon = styled('span')({
+  fontSize: "23px",
+  filter: "grayscale(100%)",
+});
+
+const TextContainerSM = styled(Grid)(({ width }) => ({
+  paddingRight: width > smBreakpointWidth ? "16px" : "0",
+}));
+
 export default function Home() {
-  const classes = useStyles();
   const { width } = useWindowDimensions();
 
   return (
-    <div className={classes.root}>
+    <Root>
       <Grid container>
-        <Grid
-          item
-          xs={12}
-          sm={8}
-          className={width > smBreakpointWidth && classes.textContainerSM}
-        >
+        <TextContainerSM item xs={12} sm={8} width={width}>
           <Typography variant="h1" gutterBottom>
             Software
             <br />
@@ -86,68 +84,53 @@ export default function Home() {
             Check out some of my previous projects in my portfolio or on GitHub
             and Hugging Face. Also, feel free to connect with me on LinkedIn!
           </Typography>
-        </Grid>
+        </TextContainerSM>
         {width > smBreakpointWidth ? (
-          <div className={classes.verticalDividerContainer}>
-            <Divider
-              orientation="vertical"
-              flexItem
-              className={classes.verticalDivider}
-            />
-          </div>
+          <VerticalDividerContainer>
+            <VerticalDividerStyled orientation="vertical" flexItem />
+          </VerticalDividerContainer>
         ) : (
-          <Divider className={classes.horizontalDivider} />
+          <HorizontalDividerStyled />
         )}
         <Grid item xs={12} sm={4}>
-          <List
-            component="nav"
-            aria-label="contact links"
-            className={classes.contactList}
-          >
+          <ContactList component="nav" aria-label="contact links">
             <ListItem
-              button
               component="a"
               target="_blank"
               href="https://linkedin.com/in/viktor-enzell-66967913b/"
             >
-              <ListItemIcon className={classes.contactListIcon}>
+              <ContactListIcon>
                 <LinkedInIcon />
-              </ListItemIcon>
+              </ContactListIcon>
               <ListItemText primary="LinkedIn" />
             </ListItem>
             <Divider />
             <ListItem
-              button
               component="a"
               target="_blank"
               href="https://github.com/viktor-enzell"
             >
-              <ListItemIcon className={classes.contactListIcon}>
+              <ContactListIcon>
                 <GitHubIcon />
-              </ListItemIcon>
+              </ContactListIcon>
               <ListItemText primary="GitHub" />
             </ListItem>
             <Divider />
             <ListItem
-              button
               component="a"
               target="_blank"
               href="https://huggingface.co/viktor-enzell"
             >
-              <ListItemIcon className={classes.contactListIcon}>
-                <span
-                  role="img"
-                  aria-label="hugging face emoji"
-                  className={classes.huggingfaceIcon}
-                >
+              <ContactListIcon>
+                <HuggingFaceIcon>
                   🤗
-                </span>
-              </ListItemIcon>
+                </HuggingFaceIcon>
+              </ContactListIcon>
               <ListItemText primary="Hugging Face" />
             </ListItem>
-          </List>
+          </ContactList>
         </Grid>
       </Grid>
-    </div>
+    </Root>
   );
 }

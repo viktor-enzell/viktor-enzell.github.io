@@ -1,18 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
+import { styled } from "@mui/material/styles";
 
-const useStyles = makeStyles({
-  root: {
-    height: "100px",
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+const StyledFooter = styled("div")({
+  height: "100px",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 });
 
 export default function Footer() {
-  const classes = useStyles();
-
-  return <div className={classes.root}></div>;
+  return <StyledFooter></StyledFooter>;
 }

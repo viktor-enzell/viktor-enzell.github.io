@@ -1,34 +1,32 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
-import { Typography } from "@material-ui/core";
+import { styled } from "@mui/material/styles";
+import { Typography } from "@mui/material";
 import { headerHeight, footerHeight, topMargin } from "./Home";
 
-const useStyles = makeStyles({
-  root: {
-    marginTop: topMargin,
-    height: "100%",
-    width: "100%",
-    minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
-  },
-  textWrapper: {
-    marginTop: "20vh",
-  },
-  statusCode: {
-    fontSize: 54,
-    textAlign: "center",
-    marginBottom: 8,
-  },
+const Root = styled('div')({
+  marginTop: topMargin,
+  height: "100%",
+  width: "100%",
+  minHeight: `calc(100vh - ${headerHeight}px - ${footerHeight}px - ${topMargin}px)`,
+});
+
+const TextWrapper = styled('div')({
+  marginTop: "20vh",
+});
+
+const StatusCode = styled(Typography)({
+  fontSize: 54,
+  textAlign: "center",
+  marginBottom: 8,
 });
 
 export default function Fallback() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <div className={classes.textWrapper}></div>
-      <Typography variant="h2" component="h1" className={classes.statusCode}>
+    <Root>
+      <TextWrapper />
+      <StatusCode variant="h2" component="h1">
         404
-      </Typography>
-    </div>
+      </StatusCode>
+    </Root>
   );
 }
