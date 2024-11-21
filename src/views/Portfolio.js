@@ -52,6 +52,7 @@ const useStyles = makeStyles({
     borderColor: "#e0e0e0",
     borderWidth: "1px",
     boxShadow: "none",
+    height: "100%",
   },
   cardImage: {
     height: "180px",
@@ -90,6 +91,41 @@ export default function Portfolio() {
         <Grid item xs={12}>
           <Card className={classes.card}>
             <CardMedia
+              image={img13}
+              alt={getImageName(img13)}
+              className={
+                width > smBreakpointWidth
+                  ? classes.cardImageSM
+                  : classes.cardImage
+              }
+              component="img"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h3" component="h2">
+                Indie Development and Freelancing
+              </Typography>
+              <Typography gutterBottom color="textSecondary">
+                Full stack, AI
+              </Typography>
+              <Typography>
+                As an indie developer and freelancer, I'm currently building
+                PodReader - a platform that transforms text content into audio
+                podcasts. In my freelance work, I specialize in AI, Python, and
+                full-stack JavaScript development. I'm always interested in
+                discussing new and exciting projects!
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" href="https://podreader.ai/" target="_blank">
+                PODREADER.AI
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Card className={classes.card}>
+            <CardMedia
               image={img12}
               alt={getImageName(img12)}
               className={
@@ -104,12 +140,14 @@ export default function Portfolio() {
                 Employment at All Ears
               </Typography>
               <Typography gutterBottom color="textSecondary">
-                Full stack, Machine Learning, DevOps
+                Full stack, AI, DevOps
               </Typography>
               <Typography>
-                Currently, I work full-time as a developer at All Ears. We
-                develop a SaaS product for monitoring brand mentions in spoken
-                media outlets like TikTok, Podcasts, Radio, and YouTube.
+                During my two years at All Ears, I worked as a developer on
+                their innovative SaaS platform. The product specializes in
+                detecting and analyzing brand mentions across various audio
+                media sources, including TikTok, podcasts, radio broadcasts, and
+                YouTube content.
               </Typography>
             </CardContent>
             <CardActions>
