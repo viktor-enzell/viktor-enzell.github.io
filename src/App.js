@@ -1,7 +1,7 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Container, Grid, CssBaseline } from "@mui/material";
-import {grey} from "@mui/material/colors";
+import { green, grey, red, yellow, indigo } from "@mui/material/colors";
 import { HashRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -73,9 +73,55 @@ const theme = createTheme({
     },
   },
   palette: {
-    primary: grey,
+    primary: {
+      darker: grey[900],
+      dark: grey[700],
+      main: "#000",
+      light: grey[500],
+      contrastText: "#fff",
+    },
+    secondary: {
+      darker: grey[900],
+      dark: grey[700],
+      main: grey[500],
+      light: grey[300],
+      contrastText: "#fff",
+    },
+    error: {
+      darker: red[900],
+      dark: red[700],
+      main: red[500],
+      light: red[300],
+      contrastText: "#fff",
+    },
+    warning: {
+      darker: yellow[900],
+      dark: yellow[700],
+      main: yellow[500],
+      light: yellow[300],
+      contrastText: "#000",
+    },
+    info: {
+      darker: indigo[900],
+      dark: indigo[700],
+      main: indigo[500],
+      light: indigo[300],
+      contrastText: "#fff",
+    },
+    success: {
+      darker: green[900],
+      dark: green[700],
+      main: green[500],
+      light: green[300],
+      contrastText: "#fff",
+    },
     background: {
-      default: "white",
+      default: "#fff",
+      secondary: grey[100],
+      paper: "#fff",
+      info: indigo[100],
+      light: grey[50],
+      dark: grey[900],
     },
   },
 });

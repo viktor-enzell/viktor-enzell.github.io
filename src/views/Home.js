@@ -13,7 +13,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 export const slimWidth = 700;
-export const headerHeight = 64;
+export const headerHeight = 48;
 export const footerHeight = 100;
 export const topMargin = 64;
 export const smBreakpointWidth = 600;

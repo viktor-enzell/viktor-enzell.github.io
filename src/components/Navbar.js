@@ -81,7 +81,7 @@ export default function Navbar() {
   return (
     <Root>
       <StyledAppBar position="fixed">
-        <StyledToolbar>
+        <StyledToolbar variant="dense" disableGutters>
           {width > swapNavbarWidth ? (
             <Tabs value={tabValue}>
               {[
@@ -90,9 +90,6 @@ export default function Navbar() {
               ].map((item) => (
                 <StyledTab
                   label={item.name}
-                  style={{
-                    backgroundColor: pathname === item.key && activeButtonColor,
-                  }}
                   component={Link}
                   to={item.key}
                   key={item.key}
@@ -105,7 +102,7 @@ export default function Navbar() {
               aria-label="open drawer"
               onClick={() => setOpen(true)}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: "black" }} />
             </MenuButtonStyled>
           )}
         </StyledToolbar>
