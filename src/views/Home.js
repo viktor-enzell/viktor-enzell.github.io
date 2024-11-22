@@ -36,6 +36,7 @@ const ContactList = styled(List)({
 
 const ContactListIcon = styled('div')({
   color: "black",
+  marginRight: "1rem",
 });
 
 const VerticalDividerContainer = styled('div')({
@@ -102,7 +103,14 @@ export default function Home() {
               <ContactListIcon>
                 <LinkedInIcon />
               </ContactListIcon>
-              <ListItemText primary="LinkedIn" />
+              <ListItemText 
+                primary="LinkedIn" 
+                sx={{ 
+                  '& .MuiListItemText-primary': {
+                    color: "black"
+                  }
+                }} 
+              />
             </ListItem>
             <Divider />
             <ListItem
@@ -113,7 +121,14 @@ export default function Home() {
               <ContactListIcon>
                 <GitHubIcon />
               </ContactListIcon>
-              <ListItemText primary="GitHub" />
+              <ListItemText 
+                primary="GitHub" 
+                sx={{ 
+                  '& .MuiListItemText-primary': {
+                    color: "black"
+                  }
+                }} 
+              />
             </ListItem>
             <Divider />
             <ListItem
@@ -126,7 +141,14 @@ export default function Home() {
                   🤗
                 </HuggingFaceIcon>
               </ContactListIcon>
-              <ListItemText primary="Hugging Face" />
+              <ListItemText 
+                primary="Hugging Face" 
+                sx={{ 
+                  '& .MuiListItemText-primary': {
+                    color: "black"
+                  }
+                }} 
+              />
             </ListItem>
           </ContactList>
         </Grid>
