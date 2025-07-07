@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.7d336d08.js",
+    "main.js": "/static/js/main.6356f467.js",
     "static/media/A tweeting bird, oil painting.jpg": "/static/media/A tweeting bird, oil painting.44b77f334eb8fac5483a.jpg",
     "static/media/A Barcelona building in the Eixample district, oil painting.jpg": "/static/media/A Barcelona building in the Eixample district, oil painting.854f58b05dc5d0dc350b.jpg",
     "static/media/An old school tv, oil painting.jpg": "/static/media/An old school tv, oil painting.ec734dce999f9cdfd900.jpg",
@@ -18,10 +18,10 @@
     "static/media/Scandinavian interior design, oil painting.jpg": "/static/media/Scandinavian interior design, oil painting.3bdcd3b28111b4e16bd2.jpg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.7d336d08.js.map": "/static/js/main.7d336d08.js.map"
+    "main.6356f467.js.map": "/static/js/main.6356f467.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.7d336d08.js"
+    "static/js/main.6356f467.js"
   ]
 }
