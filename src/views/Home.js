@@ -76,9 +76,9 @@ export default function Home() {
           </Typography>
           <Typography gutterBottom>
             Hello! My name is Viktor. I'm a full stack developer based in
-            Stockholm who enjoys building products that utilize machine
-            learning. I have a Master's degree in Computer Science from KTH,
-            where I specialized in AI, primarily focusing on natural language
+            Stockholm who enjoys building products and bringing ideas to life.
+            I have a Master's degree in Computer Science from KTH, where I
+            specialized in AI, primarily focusing on natural language
             processing and speech.
             <br />
             <br />
