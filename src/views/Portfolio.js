@@ -123,16 +123,36 @@ export default function Portfolio() {
                 Full stack, AI
               </Typography>
               <Typography>
-                As an indie developer and freelancer, I'm currently building
-                PodReader, a platform that transforms text content into audio
-                podcasts. In my freelance work, I specialize in AI, Python, and
-                full-stack JavaScript development. I'm always interested in
-                discussing new and exciting projects!
+                As an indie developer and freelancer, I'm currently building and
+                maintaining PodReader, a platform that automatically transforms
+                newsletters into podcasts using natural-sounding AI voices. The
+                platform helps newsletter publishers grow their audience by
+                repurposing their content with advanced customization and audio
+                editing features.
+                <br />
+                <br />
+                In my freelance work, I specialize in AI, Python, and full-stack
+                JavaScript development. Recent projects include a six-month
+                contract with Solace Care, an early-stage startup, where I
+                collaborated with their CTO to build their SaaS product from
+                scratch, contributing to product planning, CI/CD pipelines,
+                and AWS infrastructure.
+                <br />
+                <br />
+                I also maintain PodScribbler, a mini-project I built while
+                experimenting with new tech stacks that allows for filtering
+                and combining podcast RSS feeds.
               </Typography>
             </StyledCardContent>
             <CardActions>
               <Button size="small" href="https://podreader.ai/" target="_blank">
-                PODREADER.AI
+                PODREADER (Indie)
+              </Button>
+              <Button size="small" href="https://podscribbler.com/" target="_blank">
+                PODSCRIBBLER (Indie)
+              </Button>
+              <Button size="small" href="https://solace.care/" target="_blank">
+                SOLACE CARE (Freelance)
               </Button>
             </CardActions>
           </StyledCard>
